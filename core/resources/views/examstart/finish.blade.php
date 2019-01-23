@@ -31,8 +31,8 @@
                     </h3>
                     <hr>
                     <h3 class="text-center">
-                        {{$singleexam->price }} USD SuccessFully Added Your Account. <br>
-                        Your Current Balance is : {{ $user_balance }} USD
+                        {{$singleexam->price }} Points SuccessFully Added Your Account. <br>
+                        Your Current Points are : {{ $user_balance }} Points
                     </h3>
                 </div>
             </div>

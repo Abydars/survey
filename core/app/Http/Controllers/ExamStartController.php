@@ -227,6 +227,7 @@ class ExamStartController extends Controller
 
 
         $okay = Exam::where('user_id', Auth::guard('user')->user()->id)->where('category_id', $id)->where('status', 1)->count();
+        $okay = 0;
 
 
         if ($okay != 0) {
@@ -234,6 +235,13 @@ class ExamStartController extends Controller
             return view('examstart.skipexam',$data);
         } else {
             $data['question'] = Question::where('question_cat_name', '=', $examDetails->id)->get();
+            foreach ($data['question'] as $question){
+                $images = [];
+
+                if (!empty($question->images))
+                    $images = json_decode($question->images, true);
+                $question->images = $images;
+            }
         }
 
         $exam = new Exam;

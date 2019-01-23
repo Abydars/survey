@@ -40,6 +40,29 @@
                             <h4>{{ $question->question }}</h4>
                             <hr>
                             <div class="question_option">
+                                @if(!empty($question->video))
+                                    <div class="row col-sm-4 col-sm-offset-4">
+                                        <div class="pull-left">
+                                            <h4>Question Video</h4>
+                                            <video width="320" height="240" controls>
+                                                <source src="/core/public/videos/{{$question->video}}">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>
+                                @endif
+                                @if(!empty($images))
+                                    <div class="row col-sm-4 col-sm-offset-4">
+                                        <div class="pull-left">
+                                            <h4>Question Images</h4>
+                                            @foreach($images as $v)
+                                                <div class="col-md-6">
+                                                    <img src="/core/public/images/{{$v}}" class="img-responsive"/>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endif
                                 <div class="row col-sm-4 col-sm-offset-4">
                                     <div class="pull-left">
                                         <h4>a. {{ $question->first_option }}</h4>
@@ -77,10 +100,12 @@
 
                         <div class="row" style="margin-top: 10px">
                             <div class="col-md-5 col-md-offset-1">
-                                <a href="{{ route('question.index') }}" class="btn btn-success btn-lg"><i class="fa fa-eye"></i> View Question</a>
+                                <a href="{{ route('question.index') }}" class="btn btn-success btn-lg"><i
+                                            class="fa fa-eye"></i> View Question</a>
                             </div>
                             <div class="col-md-5">
-                                <a href="{{ route('question_edit',$question->id) }}" class="btn btn-primary btn-lg"><i class="fa fa-pencil"></i> Edit Question</a>
+                                <a href="{{ route('question_edit',$question->id) }}" class="btn btn-primary btn-lg"><i
+                                            class="fa fa-pencil"></i> Edit Question</a>
                             </div>
                         </div>
 

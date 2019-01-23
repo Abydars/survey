@@ -227,7 +227,7 @@
                         <div class="col-sm-4 col-sm-6">
                             <div class="our-team">
                                 <div class="team_img">
-                                    <img src="{{ asset('extra-images') }}/{{ $p->image }}" alt="{{ $p->name }}">
+                                    <img src="/core/public/images/{{ $p->image }}" alt="{{ $p->name }}">
                                 </div>
                                 <div class="team-content">
                                     <h3 class="title">{{ $p->name }}</h3>

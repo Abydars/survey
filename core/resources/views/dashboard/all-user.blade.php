@@ -80,7 +80,7 @@
                                         @endif
                                     </td>
                                     <td>{{ $p->email }}</td>
-                                    <td>{{ $p->balance }} - USD</td>
+                                    <td>{{ $p->balance }} - Points</td>
                                     <td>
                                         @if($p->status == 0)
                                             <button type="button" class="btn btn-danger btn-sm delete_button"

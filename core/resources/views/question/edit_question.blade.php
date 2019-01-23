@@ -36,7 +36,7 @@
                         <h3 class="panel-title"><i class="fa fa-pencil-square"></i> Sub Category Edit</h3>
                     </div>
                     <div class="panel-body">
-                        {!! Form::model($question,['route'=>['question_update',$question->id],'method'=>'PUT']) !!}
+                        {!! Form::model($question,['route'=>['question_update',$question->id],'method'=>'PUT','enctype'=>'multipart/form-data']) !!}
 
                         <div class="form-group">
                             <label for="exampleInputName2"><h4>Survey Category : </h4></label>
@@ -54,6 +54,27 @@
                         <div class="form-group">
                             <label for="exampleInputName2"><h4>Survey Question : </h4></label>
                             <input type="text" class="form-control" id="exampleInputName2" name="question" value="{{ $question->question }}" placeholder="Question" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label for=""><h4>Upload a Video</h4></label>
+                                    <input type="file" class="form-control" id="" name="video">
+                                    <input type="hidden" value="{{ $question->video }}" name="video_alt">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label for=""><h4>Upload Image</h4></label>
+                                    <input type="file" class="form-control" id="" name="images[]" multiple>
+                                    <input type="hidden" value="{{ $question->images }}" name="images_alt">
+                                </div>
+                            </div>
                         </div>
 
                         <div class="row">

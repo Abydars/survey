@@ -67,7 +67,7 @@ class SubCategoryController extends Controller
             if($request->hasFile('image')){
                 $image = $request->file('image');
                 $filename = time().'.'.$image->getClientOriginalExtension();
-                $location = 'extra-images/' . $filename;
+                $location = public_path() . '/images/' . $filename;
                 Image::make($image)->resize(350,265)->save($location);
                 $scat->image = $filename;
 
@@ -76,6 +76,11 @@ class SubCategoryController extends Controller
                 $scat->currency = $request->currency;
                 $scat->base_cat = $request->base_cat;
                 $scat->description = $request->description;
+                $scat->area = $request->area;
+                $scat->city = $request->city;
+                $scat->country = $request->country;
+                $scat->gender = $request->gender;
+                $scat->age = $request->age;
                 $scat->save();
             }
             session()->flash('success','Subcategory Created Succesfully.');
@@ -143,6 +148,11 @@ class SubCategoryController extends Controller
         $subcategory->description = $request->input('description');
         $subcategory->price= $request->input('price');
         $subcategory->currency= $request->input('currency');
+        $subcategory->area= $request->input('area');
+        $subcategory->city= $request->input('city');
+        $subcategory->country= $request->input('country');
+        $subcategory->gender= $request->input('gender');
+        $subcategory->age= $request->input('age');
 
         $subcategory->save();
         session()->flash('success','Subcategory Updated Succesfully.');

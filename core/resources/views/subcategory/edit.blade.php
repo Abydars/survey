@@ -114,6 +114,40 @@
                             <input type="text" class="form-control" id="exampleInputName2" name="description" value="{{ $subcategory->description }}" placeholder="" required>
                         </div>
 
+                        <h4>Target Audience</h4>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Area :</label>
+                            <input type="text" class="form-control" id="" name="area" required placeholder="Area" value="{{$subcategory->area}}">
+                        </div>
+                        <div class="col-md-6" style="padding: 0 10px 0 0;">
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">City :</label>
+                                <input type="text" class="form-control" id="" name="city" required placeholder="City" value="{{$subcategory->city}}">
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="padding: 0;">
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">Country :</label>
+                                <input type="text" class="form-control" id="" name="country" required placeholder="country" value="{{$subcategory->country}}">
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="padding: 0 10px 0 0;">
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">Gender :</label>
+                                <select class="form-control" name="gender">
+                                    <option value="">Select One</option>
+                                    <option value="1" {{($subcategory->gender == '1') ? 'selected' : ''}}>Male</option>
+                                    <option value="2" {{($subcategory->gender == '2') ? 'selected' : ''}}>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="padding: 0;">
+                            <div class="form-group">
+                                <label for="recipient-name" class="control-label">Age :</label>
+                                <input type="text" class="form-control" id="" name="age" required placeholder="Age" value="{{$subcategory->age}}">
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-sm-6">
                                 <a href="{{ route('subcategory.index') }}" class="btn btn-success btn-block"><i class="fa fa-eye" aria-hidden="true"></i> See All Category</a>

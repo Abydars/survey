@@ -169,6 +169,39 @@
                                         <label for="recipient-name" class="control-label">Description :</label>
                                         <input type="text" class="form-control" id="description" name="description" required placeholder="Description">
                                     </div>
+                                    <h4>Target Audience</h4>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">Area :</label>
+                                        <input type="text" class="form-control" id="" name="area" required placeholder="Area">
+                                    </div>
+                                    <div class="col-md-6" style="padding: 0 10px 0 0;">
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="control-label">City :</label>
+                                            <input type="text" class="form-control" id="" name="city" required placeholder="City">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" style="padding: 0;">
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="control-label">Country :</label>
+                                            <input type="text" class="form-control" id="" name="country" required placeholder="country">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" style="padding: 0 10px 0 0;">
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="control-label">Gender :</label>
+                                            <select class="form-control" name="gender">
+                                                <option value="">Select One</option>
+                                                <option value="1">Male</option>
+                                                <option value="2">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" style="padding: 0;">
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="control-label">Age :</label>
+                                            <input type="text" class="form-control" id="" name="age" required placeholder="Age">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

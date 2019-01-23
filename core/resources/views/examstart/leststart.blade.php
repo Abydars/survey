@@ -50,11 +50,27 @@
                 <hr>
                 {{ Form::open() }}
                 @foreach($question as $q)
-
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <h4 class="text-center">Question : {{ $q->question }}</h4>
                             <hr>
+                            @if(!empty($q->video))
+                            <div class="question" style="overflow: hidden;margin-top: 10px">
+                                <video width="320" height="240" controls>
+                                    <source src="/core/public/videos/{{$q->video}}">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            @endif
+                            @if(!empty($q->images))
+                            <div class="question" style="overflow: hidden;margin-top: 10px">
+                                @foreach($q->images as $v)
+                                    <div class="col-md-3">
+                                        <img src="/core/public/images/{{$v}}" class="img-responsive"/>
+                                    </div>
+                                @endforeach
+                            </div>
+                            @endif
                             <div class="question" style="overflow: hidden;margin-top: 10px">
                                 <div class="col-md-6 col-md-offset-2">
                                     <label for="exampleInputEmail2"><h5>(a) : {{ $q->first_option }}</h5></label>

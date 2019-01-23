@@ -9,7 +9,7 @@ class Question extends Model
     protected $table = 'questions';
 
     protected $fillable = [
-        'question','question_cat','first_option','second_option','third_option','fourth_option','fifth_option','answer'
+        'question','question_cat','first_option','second_option','third_option','fourth_option','fifth_option','answer','images','video'
     ];
     /*public function subcategory()
     {

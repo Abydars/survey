@@ -10,35 +10,34 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/',['as'=>'home','uses'=>'HomeController@getHomePage']);
-Route::get('/about-us', ['as'=>'about_us', 'uses'=>'HomeController@getAboutUs']);
-Route::get('/contact-us', ['as'=>'contact-us', 'uses'=>'HomeController@getContactUs']);
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@getHomePage']);
+Route::get('/about-us', ['as' => 'about_us', 'uses' => 'HomeController@getAboutUs']);
+Route::get('/contact-us', ['as' => 'contact-us', 'uses' => 'HomeController@getContactUs']);
 //Authentication Route List
-Route::get('auth', ['as'=>'login', 'uses'=>'AdminAuthController@getLogin']);
-Route::post('auth', ['as'=>'login', 'uses'=>'AdminAuthController@postLogin']);
-Route::get('auth/logout', ['as'=>'logout','uses'=>'AdminAuthController@logout']);
+Route::get('auth', ['as' => 'login', 'uses' => 'AdminAuthController@getLogin']);
+Route::post('auth', ['as' => 'login', 'uses' => 'AdminAuthController@postLogin']);
+Route::get('auth/logout', ['as' => 'logout', 'uses' => 'AdminAuthController@logout']);
 
 //User Registration Route List
-Route::get('user-login', ['as'=>'userlogin', 'uses'=>'UserAuthController@getLogin']);
-Route::post('user-login', ['as'=>'user_login', 'uses'=>'UserAuthController@postLogin']);
-Route::get('user-reg', ['as'=>'userreg', 'uses'=>'UserAuthController@getRegister']);
-Route::post('user-reg', ['as'=>'user_reg', 'uses'=>'UserAuthController@postRegister']);
-Route::get('user-logout', ['as'=>'user-logout', 'uses' => 'UserAuthController@logout']);
-Route::get('user-registration',['as'=>'userregistration','uses'=>'UserAuthController@getRegister']);
+Route::get('user-login', ['as' => 'userlogin', 'uses' => 'UserAuthController@getLogin']);
+Route::post('user-login', ['as' => 'user_login', 'uses' => 'UserAuthController@postLogin']);
+Route::get('user-reg', ['as' => 'userreg', 'uses' => 'UserAuthController@getRegister']);
+Route::post('user-reg', ['as' => 'user_reg', 'uses' => 'UserAuthController@postRegister']);
+Route::get('user-logout', ['as' => 'user-logout', 'uses' => 'UserAuthController@logout']);
+Route::get('user-registration', ['as' => 'userregistration', 'uses' => 'UserAuthController@getRegister']);
 
 /* user Forget Password */
-Route::get('user-forget-password',['as'=>'user-forget-password','uses'=>'UserAuthController@getForgetPassword']);
-Route::get('user-password-reset/{token}',['as'=>'user-password-reset','uses'=>'UserAuthController@resetForgetPassword']);
-Route::post('user-forget-password-submit',['as'=>'user-forget-password-submit','uses'=>'UserAuthController@submitForgetPassword']);
-Route::post('user-reset-password-submit',['as'=>'user-reset-password-submit','uses'=>'UserAuthController@ResetSubmitPassword']);
+Route::get('user-forget-password', ['as' => 'user-forget-password', 'uses' => 'UserAuthController@getForgetPassword']);
+Route::get('user-password-reset/{token}', ['as' => 'user-password-reset', 'uses' => 'UserAuthController@resetForgetPassword']);
+Route::post('user-forget-password-submit', ['as' => 'user-forget-password-submit', 'uses' => 'UserAuthController@submitForgetPassword']);
+Route::post('user-reset-password-submit', ['as' => 'user-reset-password-submit', 'uses' => 'UserAuthController@ResetSubmitPassword']);
 
 
+Route::get('edit-profile', ['as' => 'edit-profile', 'uses' => 'ExamStartController@editProfile']);
+Route::post('edit-profile', ['as' => 'edit-profile', 'uses' => 'ExamStartController@updateProfile']);
 
-Route::get('edit-profile',['as'=>'edit-profile','uses'=>'ExamStartController@editProfile']);
-Route::post('edit-profile',['as'=>'edit-profile','uses'=>'ExamStartController@updateProfile']);
-
-Route::get('change-password',['as'=>'change-password','uses'=>'ExamStartController@changePassword']);
-Route::post('change-password',['as'=>'change-password','uses'=>'ExamStartController@updatePassword']);
+Route::get('change-password', ['as' => 'change-password', 'uses' => 'ExamStartController@changePassword']);
+Route::post('change-password', ['as' => 'change-password', 'uses' => 'ExamStartController@updatePassword']);
 
 //Password Change
 Route::get('password_change', ['as' => 'password_form', 'uses' => 'PasswordChangeController@getChangePassword']);
@@ -73,18 +72,17 @@ Route::get('logo', ['as' => 'logo', 'uses' => 'WebSettingController@getLogo']);
 Route::post('logo/{id}', ['as' => 'logo_post', 'uses' => 'WebSettingController@postLogo']);
 
 // Web Title Setting
-Route::get('title', ['as'=>'title', 'uses' =>'WebSettingController@getTitle']);
-Route::put('title/{id}', ['as'=>'title_update', 'uses' => 'WebSettingController@postTitle']);
+Route::get('title', ['as' => 'title', 'uses' => 'WebSettingController@getTitle']);
+Route::put('title/{id}', ['as' => 'title_update', 'uses' => 'WebSettingController@postTitle']);
 
 // History Route
 Route::get('AddFund', ['as' => 'add_fund_history', 'uses' => 'WebSettingController@AddFund']);
 Route::get('ExamHistory', ['as' => 'exam_history', 'uses' => 'WebSettingController@ExamHistory']);
 
 
-
 // Web Setting Footer Route
-Route::get('footer', ['as'=>'footer', 'uses'=>'WebSettingController@getFooter']);
-Route::put('footer/{id}', ['as'=>'footer_update', 'uses' => 'WebSettingController@postFooter']);
+Route::get('footer', ['as' => 'footer', 'uses' => 'WebSettingController@getFooter']);
+Route::put('footer/{id}', ['as' => 'footer_update', 'uses' => 'WebSettingController@postFooter']);
 
 // Website Setting Slider Route
 Route::get('slider', ['as' => 'slider', 'uses' => 'WebSettingController@getSlider']);
@@ -112,12 +110,12 @@ Route::get('contact', ['as' => 'contact', 'uses' => 'WebSettingController@getCon
 Route::put('contact/{id}', ['as' => 'contact_update', 'uses' => 'WebSettingController@putContact']);
 
 // Route for About Us
-Route::get('about', ['as' => 'aboutus', 'uses'=>'WebSettingController@getAbout']);
+Route::get('about', ['as' => 'aboutus', 'uses' => 'WebSettingController@getAbout']);
 Route::put('about/{id}', ['as' => 'about_update', 'uses' => 'WebSettingController@putAbout']);
 
 // Route for payment Setting
-Route::get('payment', ['as'=>'payment', 'uses'=>'WebSettingController@getPayment']);
-Route::put('payment/{id}', ['as'=>'payment_update', 'uses'=>'WebSettingController@putPayment']);
+Route::get('payment', ['as' => 'payment', 'uses' => 'WebSettingController@getPayment']);
+Route::put('payment/{id}', ['as' => 'payment_update', 'uses' => 'WebSettingController@putPayment']);
 
 // Route For Exam Category
 Route::get('exam/{id}', ['as' => 'exam_id', 'uses' => 'ExamController@getExamById']);
@@ -127,16 +125,16 @@ Route::get('exam', ['as' => 'exam', 'uses' => 'ExamController@getExam']);
 Route::get('examstart/{id}', ['as' => 'exam_start', 'uses' => 'ExamStartController@getExamStart']);
 
 
-Route::get('examconfirm/{id}', ['as'=>'exam_confirm', 'uses' =>'ExamStartController@getExamConfirm']);
-Route::get('examineMe/{id}', ['as'=>'lets_exam', 'uses' =>'ExamStartController@LestStartExam']);
-Route::post('examineMe/{id}', ['as'=>'lets_exam', 'uses' =>'ExamStartController@FinishExam']);
+Route::get('examconfirm/{id}', ['as' => 'exam_confirm', 'uses' => 'ExamStartController@getExamConfirm']);
+Route::get('examineMe/{id}', ['as' => 'lets_exam', 'uses' => 'ExamStartController@LestStartExam']);
+Route::post('examineMe/{id}', ['as' => 'lets_exam', 'uses' => 'ExamStartController@FinishExam']);
 
-Route::get('my_exams', ['as'=>'my_exams', 'uses' =>'ExamStartController@MyExams']);
-Route::get('myexam/{id}', ['as'=>'my_exam', 'uses' =>'ExamStartController@MyResult']);
+Route::get('my_exams', ['as' => 'my_exams', 'uses' => 'ExamStartController@MyExams']);
+Route::get('myexam/{id}', ['as' => 'my_exam', 'uses' => 'ExamStartController@MyResult']);
 
 // Survey History
-Route::get('survey-history',['as'=>'survey-history','uses'=>'DashboardController@surveyHistory']);
-Route::get('survey-view/{id}',['as'=>'survey-view','uses'=>'DashboardController@surveyView']);
+Route::get('survey-history', ['as' => 'survey-history', 'uses' => 'DashboardController@surveyHistory']);
+Route::get('survey-view/{id}', ['as' => 'survey-view', 'uses' => 'DashboardController@surveyView']);
 
 // Add Fund Route List
 Route::get('add-fund', ['as' => 'add_fund', 'uses' => 'FundController@getFund']);
@@ -146,26 +144,28 @@ Route::post('pm_ipn', ['as' => 'pm_fund', 'uses' => 'FundController@pm']);
 
 
 //Withdraw Method
-Route::get('method-create',['as'=>'method-create','uses'=>'DashboardController@createMethod']);
-Route::post('method-create',['as'=>'method-create','uses'=>'DashboardController@storeMethod']);
-Route::get('method-show',['as'=>'method-show','uses'=>'DashboardController@showMethod']);
-Route::get('method-edit/{id}',['as'=>'method-edit','uses'=>'DashboardController@editMethod']);
-Route::put('method-edit/{id}',['as'=>'method-update','uses'=>'DashboardController@updateMethod']);
-Route::delete('method-destroy/{id}',['as'=>'method-destroy','uses'=>'DashboardController@destroyMethod']);
+Route::get('method-create', ['as' => 'method-create', 'uses' => 'DashboardController@createMethod']);
+Route::post('method-create', ['as' => 'method-create', 'uses' => 'DashboardController@storeMethod']);
+Route::get('method-show', ['as' => 'method-show', 'uses' => 'DashboardController@showMethod']);
+Route::get('method-edit/{id}', ['as' => 'method-edit', 'uses' => 'DashboardController@editMethod']);
+Route::put('method-edit/{id}', ['as' => 'method-update', 'uses' => 'DashboardController@updateMethod']);
+Route::delete('method-destroy/{id}', ['as' => 'method-destroy', 'uses' => 'DashboardController@destroyMethod']);
 
 // Withdraw Request Route
-Route::post('withdraw-request',['as'=>'withdraw-request','uses'=>'HomeController@postWithdraw']);
-Route::get('withdraw-history',['as'=>'withdraw-history','uses'=>'DashboardController@getWithdraw']);
-Route::get('withdraw-submit/{id}',['as'=>'withdraw-submit','uses'=>'DashboardController@submitWithdraw']);
-Route::get('withdraw-refund/{id}',['as'=>'withdraw-refund','uses'=>'DashboardController@refundWithdraw']);
+Route::post('withdraw-request', ['as' => 'withdraw-request', 'uses' => 'HomeController@postWithdraw']);
+Route::get('withdraw-history', ['as' => 'withdraw-history', 'uses' => 'DashboardController@getWithdraw']);
+Route::get('withdraw-submit/{id}', ['as' => 'withdraw-submit', 'uses' => 'DashboardController@submitWithdraw']);
+Route::get('withdraw-refund/{id}', ['as' => 'withdraw-refund', 'uses' => 'DashboardController@refundWithdraw']);
 
 //Contact Page Route list
-Route::post('contact-send',['as'=>'contact-send','uses'=>'HomeController@sendContact']);
+Route::post('contact-send', ['as' => 'contact-send', 'uses' => 'HomeController@sendContact']);
 
 
-Route::get('all-users',['as'=>'all-users','uses'=>'DashboardController@allUsers']);
-Route::post('block-user',['as'=>'block-user','uses'=>'DashboardController@blockUser']);
-Route::post('unblock-user',['as'=>'unblock-user','uses'=>'DashboardController@UnblockUser']);
+Route::get('all-users', ['as' => 'all-users', 'uses' => 'DashboardController@allUsers']);
+Route::post('block-user', ['as' => 'block-user', 'uses' => 'DashboardController@blockUser']);
+Route::post('unblock-user', ['as' => 'unblock-user', 'uses' => 'DashboardController@UnblockUser']);
 
-Route::get('/facebook/callback', ['as'=>'login', 'uses'=>'UserAuthController@postFacebookLogin']);
+Route::get('/facebook/callback', ['as' => 'login', 'uses' => 'UserAuthController@postFacebookLogin']);
 
+//Google
+Route::get('glogin', array('as' => 'glogin', 'uses' => 'UserAuthController@googleLogin'));

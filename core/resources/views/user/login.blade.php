@@ -14,7 +14,8 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <a href="{{Facebook::getRedirectLoginHelper()->getLoginUrl(url('facebook/callback'), ['email'])}}">Login with facebook</a>
+                                <a href="{{Facebook::getRedirectLoginHelper()->getLoginUrl(url('facebook/callback'), ['email'])}}">Login with Facebook</a>
+                                <a href="{{url('glogin')}}">Login with Google</a>
                                 @if(Session::has('success'))
                                     <div class="alert alert-success" role="alert">
                                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>

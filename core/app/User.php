@@ -2,6 +2,7 @@
 
 namespace App;
 
+use DateTime;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -26,4 +27,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public static function getAge($user_id){
+        $user = User::findOrFail($user_id);
+        $from = new DateTime($user->dob);
+        $to   = new DateTime('today');
+        return $from->diff($to)->y;
+    }
 }

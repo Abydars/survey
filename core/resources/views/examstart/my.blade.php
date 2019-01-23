@@ -32,7 +32,7 @@
                     <tr style="font-weight: bold;">
                         <td>Survey Name</td>
                         <td> Date </td>
-                        <td> Price </td>
+                        <td> Points </td>
                     </tr>
                     </thead>
                     <tbody>
@@ -42,7 +42,7 @@
                         <tr>
                             <td>{{ $exam->subcat->name }}</td>
                             <td>{{ date('d-F-Y h:i A',strtotime($exam->created_at))  }} </td>
-                            <td>{{ $exam->subcat->price }} USD</td>
+                            <td>{{ $exam->subcat->price }} Points</td>
                         </tr>
 
                       @endforeach

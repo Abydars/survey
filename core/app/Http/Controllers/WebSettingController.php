@@ -181,12 +181,12 @@ class WebSettingController extends Controller
         $partner = new Partner;
         $this->validate($request, [
            'name' => 'required',
-            'image' => 'required|mimes:jpg,jpeg,png|dimensions:max_width=160,max_height=125'
+            'image' => 'required|mimes:jpg,jpeg,png|dimensions:max_width=1024,max_height=768'
         ]);
         if($request->hasFile('image')){
             $image = $request->file('image');
             $filename = time().'.'.$image->getClientOriginalExtension();
-            $location = 'extra-images/' . $filename;
+            $location = public_path(). '/images/' . $filename;
             Image::make($image)->save($location);
             $partner->image = $filename;
             $partner->name = $request->name;

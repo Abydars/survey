@@ -65,7 +65,7 @@
                                     <td>{{ $i++ }}</td>
                                     <td>{{ date('d-F-Y',strtotime($curr->created_at)) }}</td>
                                     <td>{{ $curr->user->name}}</td>
-                                    <td>{{ $curr->balance}} USD</td>
+                                    <td>{{ $curr->balance}} Points</td>
                                     <td>
                                         @if($curr->status == 0)
                                             <span class="label label-info">Pending</span>

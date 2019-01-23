@@ -4381,32 +4381,87 @@ ul.gt_plan_offer_list li a{
 	  ============================================================
 */
 
-
-
-
-/* 
-   Custom Style changes
- */
- .gt_hdr3_navigation .navbar-collapse {
-    padding: 15px 0;
- }
- .gt_hdr3_navigation ul li a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+/*
+ Custom Style changes
+*/
+.gt_hdr3_navigation .navbar-collapse {
+	padding: 15px 0;
 }
- .gt_hdr3_navigation ul li.active a { 
-    padding: 10px 25px !important;
+.gt_hdr3_navigation ul li a {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
- 
- .gt_hdr3_navigation ul li.active:before, .gt_hdr3_navigation ul li:hover:before {
+.gt_hdr3_navigation ul li.active a {
+	padding: 10px 25px !important;
+	color:#80cd33;
+}
+.gt_hdr3_navigation ul li:hover > a {
+	color:#80cd33;
+}
+.gt_hdr3_navigation ul li.active:before, .gt_hdr3_navigation ul li:hover:before {
+	border-radius: 25px;
+	background-color: transparent;
+	border: 2px solid #80cd33;
+}
+.gt_hdr3_navigation ul ul li:hover:before {
+	border-radius:0px
 
-    border-radius: 25px;
 }
- .gt_hdr3_navigation ul ul li:hover:before {
-	 border-radius:0px
- }
- 
- .gt_hdr3_navigation ul > li:hover > ul {
-    margin-top: 10px;
-    box-shadow: 2px 1px 2px 0px #8aa765;
+
+.gt_hdr3_navigation ul > li:hover > ul {
+	margin-top: 10px;
+	box-shadow: 2px 1px 2px 0px #8aa765;
+}
+.gt_hdr3_navigation ul > li:hover > ul  li:hover > a{
+	color:#fff;
+	background-color:#80cd33;
+}
+
+
+.swiper-wrapper {
+	padding: 30px 0 25px;
+}
+.service h3 {
+	margin: 50px 0px 30px !important;
+}
+
+.service a {
+	padding: 9px 30px !important;
+	border-radius: 30px !important;
+	font-size: 20px !important;
+}
+section.gt_wht_offer_bg {
+	padding-top: 0;
+}
+section{
+	padding: 50px 0px 30px !important;
+}
+.main-service {
+	height: 390px !important;
+}
+
+
+.section {
+	padding: 0px !important;
+}
+
+
+
+.section-title {
+	margin-bottom:0 !important;
+}
+.our-team {
+	text-align: center;
+	background-image: linear-gradient(70deg, rgb(124, 114, 201) 0%, rgb(90, 159, 226) 100%);
+}
+.our-team .team-content {
+	padding: 0px 15px !important;
+	margin-top: -20px;
+	background: transparent !important;
+	margin-bottom: 30px;
+}
+.our-team .team_img {
+	width: 270px;
+	height: auto;
+	margin: auto;
 }

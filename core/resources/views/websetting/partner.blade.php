@@ -85,7 +85,7 @@
 
                                 <div class="col-md-3">
                                     <div class="img">
-                                        <img title="{{ $p->name }}" src="{{ asset('extra-images') }}/{{ $p->image }}" alt="" style="width: 160px; height: 125; margin-top: 20px">
+                                        <img title="{{ $p->name }}" src="/core/public/images/{{ $p->image }}" alt="" style="width: 160px; height: 125; margin-top: 20px">
                                     </div>
 
                                     {!! Form::open(['route'=>['partner_delete',$p->id],'method'=>'DELETE']) !!}

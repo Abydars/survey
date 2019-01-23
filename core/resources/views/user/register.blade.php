@@ -54,13 +54,15 @@
                         <fieldset>
                             <h2 class="fs-title">Personal Information</h2>
                             <h3 class="fs-subtitle">Tell us something more about you</h3>
-                            <input type="text" id="dob" name="dob" placeholder="dd-mm-yyyy Date of Birth" required required="" />
-                            <select type="text" id="gender" name="gender" />
+                            <input type="text" id="dob" name="dob" placeholder="dd-mm-yyyy Date of Birth" required />
+                            <select type="text" id="gender" name="gender" required />
     	                        <option value="">Select Gender</option>
     	                            <option value="1">Male</option>
     	                            <option value="2">Female</option>
     	                        </select>
-                            <select type="text" id="country" name="country" required="" />
+                            <input type="text" id="area" name="area" placeholder="Area" required="required" />
+                            <input type="text" id="city" name="city" placeholder="City" required="required" />
+                            <select type="text" id="country" name="country" required="required" />
                                 <option value="">Select Country</option>
                                 <option value="Afganistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>

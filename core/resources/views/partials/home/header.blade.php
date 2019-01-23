@@ -28,7 +28,7 @@
 	<link rel="stylesheet" href="{{ asset('css/my-assets/css/style3.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/my-assets/css/style4.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/my-assets/bootstrap/css/bootstrap.min.css') }}">
-	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 	<link href="{{ asset('css/my-assets/css/jquery.atAccordionOrTabs.css') }}" rel="stylesheet" type="text/css">
 	
 	

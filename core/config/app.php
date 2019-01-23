@@ -162,6 +162,11 @@ return [
          * Facebook SDK
          */
         SammyK\LaravelFacebookSdk\LaravelFacebookSdkServiceProvider::class,
+
+        /*
+        * Google SDK
+        */
+        PulkitJalan\Google\GoogleServiceProvider::class,
     ],
 
     /*
@@ -214,6 +219,11 @@ return [
         * Facebook SDK
         */
         'Facebook' => SammyK\LaravelFacebookSdk\FacebookFacade::class,
+
+        /*
+        * Facebook SDK
+        */
+        'Google' => PulkitJalan\Google\Facades\Google::class,
     ],
 
 ];

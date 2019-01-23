@@ -50,7 +50,7 @@
                     @else
                         <li><a href="#">Hi. {{ Auth::guard('user')->user()->name }}</a>
                             <ul>
-                                <li><a href="{{ route('add_fund') }}">BALANCE [ {{ Auth::guard('user')->user()->balance }} USD ]</a></li>
+                                <li><a href="{{ route('add_fund') }}">BALANCE [ {{ Auth::guard('user')->user()->balance }} Points ]</a></li>
                                 <li><a href="{{ route('my_exams') }}">My Survey</a></li>
                                 <li><a href="{{ route('edit-profile') }}">Edit Profile</a></li>
                                 <li><a href="{{ route('change-password') }}">Change Password</a></li>

@@ -13,12 +13,19 @@ use App\SubCategory;
 use Illuminate\Support\Facades\Session;
 use App\Title;
 use App\Footer;
+use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class ExamController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:user');
+    }
 
     public function getExam()
     {
+
         $logo = Logo::first();
         $social = SocialIcon::first();
         $contact = Contact::first();
@@ -26,6 +33,31 @@ class ExamController extends Controller
         $title = Title::first();
         $footer = Footer::first();
         $curr = Currency::all();
+        $user = User::findOrFail(Auth::guard('user')->user()->id);
+        $age = $user->getAge(Auth::guard('user')->user()->id);
+
+        foreach ($exam_category as $k => $cat) {
+            $eligible = true;
+            $gender = $user->gender;
+            if (!empty($cat->area) && strtolower($cat->area) != strtolower($user->area)) {
+                $eligible = false;
+            }
+            if (!empty($cat->city) && strtolower($cat->city) != strtolower($user->city)) {
+                $eligible = false;
+            }
+            if (!empty($cat->country) && strtolower($cat->country) != strtolower($user->country)) {
+                $eligible = false;
+            }
+            if (!empty($cat->gender) && strtolower($cat->gender) != $gender) {
+                $eligible = false;
+            }
+            if (!empty($cat->age) && $cat->age != $age) {
+                $eligible = false;
+            }
+            if (!$eligible) {
+                unset($exam_category[$k]);
+            }
+        }
         return view('exam.exam')
             ->withLogo($logo)
             ->withSocial($social)
@@ -35,6 +67,7 @@ class ExamController extends Controller
             ->withTitle($title)
             ->withFooter($footer);
     }
+
     public function getExamById($id)
     {
         $logo = Logo::first();

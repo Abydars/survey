@@ -26,7 +26,7 @@
 
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h3 class="text-center">Current Balance is : {{ Auth::guard('user')->user()->balance }} USD</h3>
+                        <h3 class="text-center">Current Points are : {{ Auth::guard('user')->user()->balance }} Points</h3>
                         <hr>
                         @if(Session::has('success'))
                             <div class="alert alert-info">
@@ -98,7 +98,7 @@
                                     @foreach($withdraw as $w)
                                     <tr>
                                         <th>{{ date('d-F-Y',strtotime($w->created_at)) }}</th>
-                                        <th>{{ $w->balance }} USD</th>
+                                        <th>{{ $w->balance }} Points</th>
                                         <th>
                                             @if($w->status == 0)
                                                 <span class="label label-info label-lg">Pending</span>

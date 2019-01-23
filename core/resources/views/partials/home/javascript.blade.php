@@ -1,6 +1,9 @@
 
 <!--Jquery Library-->
-<script src="{{ asset('js/jquery.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+{{--<script src="{{ asset('js/jquery.js') }}"></script>--}}
 <!--Bootstrap core JavaScript-->
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!--Swiper JavaScript-->
@@ -21,14 +24,12 @@
 <script src="{{ asset('js/wow.min.js') }}"></script>
 <!--Custom JavaScript-->
 <script src="{{ asset('js/custom.js') }}"></script>
-<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script src="{{ asset('css/my-assets/js/jpix.min.js') }}"></script>
 <script src="{{ asset('css/my-assets/js/knockout-file-bindings.js') }} "></script>
 <script src="{{ asset('css/my-assets/js/upload.js') }}"></script>
 
 <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<!--<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
 <script src="{{ asset('css/my-assets/js/msform.js') }}"></script>
 <script src="{{ asset('css/my-assets/reg/bootstrap/js/bootstrap.min.js') }}"></script>
 
