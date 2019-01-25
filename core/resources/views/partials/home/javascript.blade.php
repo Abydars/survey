@@ -1,4 +1,3 @@
-
 <!--Jquery Library-->
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
@@ -34,27 +33,60 @@
 <script src="{{ asset('css/my-assets/reg/bootstrap/js/bootstrap.min.js') }}"></script>
 
 <script type="text/javascript">
-		$(function () {
-		  $('ul.tabs').pixiefyTabs();
-		  $('ul.accordion').pixiefyAccordion();
-		})
-	</script>
-	<script type="text/javascript">
-		$(function () {
-		  $('ul.taks').pixiefyTabs();
-		  $('ul.accordion').pixiefyAccordion();
-		})
-	</script>
-	<script type="text/javascript">
+    $(function () {
+        $('ul.tabs').pixiefyTabs();
+        $('ul.accordion').pixiefyAccordion();
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        $('ul.taks').pixiefyTabs();
+        $('ul.accordion').pixiefyAccordion();
+    })
+</script>
+<script type="text/javascript">
 
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-36251023-1']);
-		_gaq.push(['_setDomainName', 'jqueryscript.net']);
-		_gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
 
-		(function() {
-		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<script>
+    $(document).ready(function () {
+        $.get("https://ipinfo.io", function (response) {
+            var city = response.city;
+            $("#registration_form").submit(function () {
+                var user_city = $("#msform").find('#city').val();
+                if (user_city.toLowerCase() != city.toLowerCase()) {
+                    alert('Your current location does not match your city');
+                    return false;
+                }
+            });
+        }, "jsonp");
+    })
+    // $("#first_next").click(function () {
+    //     var name = $('#name').val();
+    //     var username = $('#username').val();
+    //     var phone = $('#phone').val();
+        
+    //     if (name == "") {
+    //         alert('Please write your Full Name');
+    //     }else if (username == "") {
+    //         alert('Please write your Username');
+    //         return false;
+    //     }else if (phone == "") {
+    //         alert('Please write your Phone Number');
+    //         return false;
+    //     }
+    // });
+
+</script>

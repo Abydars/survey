@@ -608,7 +608,53 @@ body.app_version .header_style_01.fixed-menu{
     margin: 0 0 25px;
     padding: 0;
     text-transform: none;
+	 background-image: linear-gradient(90deg, rgb(124, 114, 201) 0%, rgb(90, 159, 226) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+
+.testimonials-wrapper {
+    background-image: linear-gradient(70deg, rgb(124, 114, 201) 0%, rgb(90, 159, 226) 100%);
+}
+
+.testimonials-bg-wrapper {
+    background: url(../../../../extra-images/bg-testimonials.png) no-repeat 50% fixed;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.testimonial {
+    border: 15px solid #fff;
+    min-width: 300px;
+    padding: 4em 2em 2em;
+    -ms-flex: 1 0 300px;
+    flex: 1 0 300px;
+    text-align: center;
+}
+@media (min-width: 800px){
+.testimonial {
+    min-width: 400px;
+    -ms-flex: 1 0 400px;
+    flex: 1 0 400px;
+	}
+}
+@media (min-width: 630px){
+.content {
+    font-size: 1.5em;
+	}
+}
+ .testimonial>* {
+    color: #fff;
+	    font-weight: 600;
+}
+.author {
+    font-size: 1.2em;
+    margin-bottom: 0;
+	    padding: 20px 0px 5px;
+}
+
 
 .section.colorsection p,
 .section.colorsection h3,

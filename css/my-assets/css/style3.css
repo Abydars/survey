@@ -80,9 +80,9 @@ body{background-color: #EBEBEB;}
 .about-sec5 p{color: #737373; font-size: 15px; margin:0 auto; text-align: justify;}
 .about-sec5 img{width: 280px; margin: 20px 0px 0px -15px;}
 
-.about-sec6{ border: solid 1px; background-color: white; border-radius: 10px; height: 230px; margin-top: -40px; box-shadow: 3px 3px 10px; }
+.about-sec6{ border: solid 1px; background-color: white; border-radius: 10px; height: 280px; margin-top: -40px; box-shadow: 3px 3px 10px; }
 .about-sec6 h3{ margin-top: 20px; font-size: 25px;}
-.vl3 {border-left: 10px solid #BDD3DC; height: 228px; float: right; margin-left: 20px;}
+.vl3 {border-left: 10px solid #BDD3DC; height: 278px; float: right; margin-left: 20px;}
 .about-sec6 p{color: #737373; font-size: 15px; margin:0 auto; text-align: justify;}
 .about-sec6 img{width: 280px; margin: 20px 0px 0px -15px;}
 /*About us CSS End*/

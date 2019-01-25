@@ -75,6 +75,151 @@ class HomeController extends Controller
             ->withTitle($title)
             ->withFooter($footer);
     }
+
+    public function getBlog()
+    {
+        $logo = Logo::first();
+        $social = SocialIcon::first();
+        $contact = Contact::first();
+        $sponsor = Partner::all();
+        $exam_category = SubCategory::orderBy('id', 'DESC')->get();
+        $about = AboutUs::first();
+        $title = Title::first();
+        $footer = Footer::first();
+        return view('home.blog')
+            ->withSocial($social)
+            ->withContact($contact)
+            ->withPartner($sponsor)
+            ->withCategory($exam_category)
+            ->withLogo($logo)
+            ->withAbout($about)
+            ->withTitle($title)
+            ->withFooter($footer);
+    }
+
+    public function getMagazine()
+    {
+        $logo = Logo::first();
+        $social = SocialIcon::first();
+        $contact = Contact::first();
+        $sponsor = Partner::all();
+        $exam_category = SubCategory::orderBy('id', 'DESC')->get();
+        $about = AboutUs::first();
+        $title = Title::first();
+        $footer = Footer::first();
+        return view('home.magazine')
+            ->withSocial($social)
+            ->withContact($contact)
+            ->withPartner($sponsor)
+            ->withCategory($exam_category)
+            ->withLogo($logo)
+            ->withAbout($about)
+            ->withTitle($title)
+            ->withFooter($footer);
+    }
+
+    public function getFaqs()
+    {
+        $logo = Logo::first();
+        $social = SocialIcon::first();
+        $contact = Contact::first();
+        $sponsor = Partner::all();
+        $exam_category = SubCategory::orderBy('id', 'DESC')->get();
+        $about = AboutUs::first();
+        $title = Title::first();
+        $footer = Footer::first();
+        return view('home.faqs')
+            ->withSocial($social)
+            ->withContact($contact)
+            ->withPartner($sponsor)
+            ->withCategory($exam_category)
+            ->withLogo($logo)
+            ->withAbout($about)
+            ->withTitle($title)
+            ->withFooter($footer);
+    }
+
+    public function getPrivacyPolicy()
+    {
+        $logo = Logo::first();
+        $social = SocialIcon::first();
+        $contact = Contact::first();
+        $sponsor = Partner::all();
+        $exam_category = SubCategory::orderBy('id', 'DESC')->get();
+        $about = AboutUs::first();
+        $title = Title::first();
+        $footer = Footer::first();
+        return view('home.privacy-policy')
+            ->withSocial($social)
+            ->withContact($contact)
+            ->withPartner($sponsor)
+            ->withCategory($exam_category)
+            ->withLogo($logo)
+            ->withAbout($about)
+            ->withTitle($title)
+            ->withFooter($footer);
+    }
+
+    public function getCookies()
+    {
+        $logo = Logo::first();
+        $social = SocialIcon::first();
+        $contact = Contact::first();
+        $sponsor = Partner::all();
+        $exam_category = SubCategory::orderBy('id', 'DESC')->get();
+        $about = AboutUs::first();
+        $title = Title::first();
+        $footer = Footer::first();
+        return view('home.cookies')
+            ->withSocial($social)
+            ->withContact($contact)
+            ->withPartner($sponsor)
+            ->withCategory($exam_category)
+            ->withLogo($logo)
+            ->withAbout($about)
+            ->withTitle($title)
+            ->withFooter($footer);
+    }
+
+    public function getTermsConditions()
+    {
+        $logo = Logo::first();
+        $social = SocialIcon::first();
+        $contact = Contact::first();
+        $sponsor = Partner::all();
+        $exam_category = SubCategory::orderBy('id', 'DESC')->get();
+        $about = AboutUs::first();
+        $title = Title::first();
+        $footer = Footer::first();
+        return view('home.terms-conditions')
+            ->withSocial($social)
+            ->withContact($contact)
+            ->withPartner($sponsor)
+            ->withCategory($exam_category)
+            ->withLogo($logo)
+            ->withAbout($about)
+            ->withTitle($title)
+            ->withFooter($footer);
+    }
+
+	   public function getCareers()
+    {
+        $logo = Logo::first();
+        $social = SocialIcon::first();
+        $contact = Contact::first();
+        $sponsor = Partner::all();
+        $exam_category = SubCategory::orderBy('id', 'DESC')->get();
+        $title = Title::first();
+        $footer = Footer::first();
+        return view('home.careers')
+            ->withSocial($social)
+            ->withContact($contact)
+            ->withPartner($sponsor)
+            ->withCategory($exam_category)
+            ->withLogo($logo)
+            ->withTitle($title)
+            ->withFooter($footer);
+    }
     public function getContactUs()
     {
         $logo = Logo::first();
@@ -93,6 +238,82 @@ class HomeController extends Controller
             ->withTitle($title)
             ->withFooter($footer);
     }
+    public function getWhoWeAre()
+    {
+        $logo = Logo::first();
+        $social = SocialIcon::first();
+        $contact = Contact::first();
+        $sponsor = Partner::all();
+        $exam_category = SubCategory::orderBy('id', 'DESC')->get();
+        $title = Title::first();
+        $footer = Footer::first();
+        return view('home.who-we-are')
+            ->withSocial($social)
+            ->withContact($contact)
+            ->withPartner($sponsor)
+            ->withCategory($exam_category)
+            ->withLogo($logo)
+            ->withTitle($title)
+            ->withFooter($footer);
+    }
+
+    public function getQuantitativeResearch()
+    {
+        $logo = Logo::first();
+        $social = SocialIcon::first();
+        $contact = Contact::first();
+        $sponsor = Partner::all();
+        $exam_category = SubCategory::orderBy('id', 'DESC')->get();
+        $title = Title::first();
+        $footer = Footer::first();
+        return view('home.quantitative-research')
+            ->withSocial($social)
+            ->withContact($contact)
+            ->withPartner($sponsor)
+            ->withCategory($exam_category)
+            ->withLogo($logo)
+            ->withTitle($title)
+            ->withFooter($footer);
+    }
+
+    public function getQualitativeResearch()
+    {
+        $logo = Logo::first();
+        $social = SocialIcon::first();
+        $contact = Contact::first();
+        $sponsor = Partner::all();
+        $exam_category = SubCategory::orderBy('id', 'DESC')->get();
+        $title = Title::first();
+        $footer = Footer::first();
+        return view('home.qualitative-research')
+            ->withSocial($social)
+            ->withContact($contact)
+            ->withPartner($sponsor)
+            ->withCategory($exam_category)
+            ->withLogo($logo)
+            ->withTitle($title)
+            ->withFooter($footer);
+    }
+
+    public function getSocialEnvironmentalResearch()
+    {
+        $logo = Logo::first();
+        $social = SocialIcon::first();
+        $contact = Contact::first();
+        $sponsor = Partner::all();
+        $exam_category = SubCategory::orderBy('id', 'DESC')->get();
+        $title = Title::first();
+        $footer = Footer::first();
+        return view('home.social-environmental-research')
+            ->withSocial($social)
+            ->withContact($contact)
+            ->withPartner($sponsor)
+            ->withCategory($exam_category)
+            ->withLogo($logo)
+            ->withTitle($title)
+            ->withFooter($footer);
+    }
+
     public function postWithdraw(Request $request)
     {
         $this->validate($request,[

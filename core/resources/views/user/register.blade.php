@@ -35,23 +35,31 @@
 
 
                     <div id="msform">
-                    {!! Form::open(['route'=>'user_reg','method'=>'POST']) !!}
+                    {!! Form::open(['route'=>'user_reg','method'=>'POST', 'onsubmit'=>'validateCity()', 'id' => 'registration_form']) !!}
                         <!-- progressbar -->
+                        <div class="login-social">
+                            <div class="log-fb">
+                                <a href="{{Facebook::getRedirectLoginHelper()->getLoginUrl(url('facebook/callback'), ['email'])}}"><i class="fa fa-facebook"></i> Login with Facebook</a>
+                            </div>
+                            <div class="log-gg">
+                                <a href="{{url('glogin')}}"><i class="fa fa-google"></i> Login with Google</a>
+                            </div>
+                        </div>
                         <ul id="progressbar">
                             <li class="active">Personal Details</li>
                             <li>Social Profiles</li>
                             <li>Account Setup</li>
                         </ul>
                         <!-- fieldsets -->
-                        <fieldset>
+                        <fieldset id="one">
                             <h2 class="fs-title">Personal Details</h2>
                             <h3 class="fs-subtitle">Tell us something more about you</h3>
                             <input type="text" id="name" name="name" placeholder="Full Name" required="" />
                             <input type="text" id="username" name="username" placeholder="User Name" required="" />
-                            <input type="text" name="phone" placeholder="Phone" required="" />
-                            <input type="button" name="next" class="next action-button" value="Next"/>
+                            <input type="text" id="phone" name="phone" placeholder="Phone" required="" />
+                            <input type="button" name="next" class="next action-button" value="Next" id="first_next"/>
                         </fieldset>
-                        <fieldset>
+                        <fieldset id="two">
                             <h2 class="fs-title">Personal Information</h2>
                             <h3 class="fs-subtitle">Tell us something more about you</h3>
                             <input type="text" id="dob" name="dob" placeholder="dd-mm-yyyy Date of Birth" required />
@@ -313,14 +321,14 @@
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
                             <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                            <input type="button" name="next" class="next action-button" value="Next"/>
+                            <input type="button" name="next" class="next action-button" value="Next"/ id="second-form">
                         </fieldset>
-                        <fieldset>
+                        <fieldset id="three">
                             <h2 class="fs-title">Create your account</h2>
                             <h3 class="fs-subtitle">Fill in your credentials</h3>
                             <input type="text" id="email" name="email" placeholder="Email" required="" />
-                            <input type="password" name="password" placeholder="Password" required="" />
-                            <input type="password" name="password_confirmation" placeholder="Confirm Password" required="" />
+                            <input type="password" name="password" placeholder="Password" required="" id="first_pass" />
+                            <input type="password" name="password_confirmation" placeholder="Confirm Password" required="" id="second_pass" />
                             <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
 
                             <button type="submit" name="register-form-submit" id="register-form-submit" class="reg-btn" value="register"/>Register</button>

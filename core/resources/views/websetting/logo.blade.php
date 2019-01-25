@@ -68,7 +68,6 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <input type="file" name="name" id="" class="form-control" required>
-                                                    <p style="margin-left: 10px"><b>Note : </b>Image Must be PNG. <br>Max: 225px X 60px</p>
                                                 </div>
 
                                             </div>

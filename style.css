@@ -749,7 +749,8 @@ ul.gt_hdr3_scl_icon li a{
 }
 /*Slide List*/
 .gt_slide_1{
-	top: 5%;
+	/* top: 5%; */
+	top: 25%;
 	left: 0px;
 	width: 100%;
 	text-align: center;
@@ -4444,7 +4445,9 @@ section{
 .section {
 	padding: 0px !important;
 }
-
+section.gt_wht_offer_bg {
+    padding-top: 0;
+}
 
 
 .section-title {
@@ -4464,4 +4467,158 @@ section{
 	width: 270px;
 	height: auto;
 	margin: auto;
+}
+.our-team .title {
+    font-size: 26px !important;
+    color: #80cd2b !important;
+    margin: 0px 0 10px !important;
+ 
+}
+/* footer */
+.social-widget {
+    position: relative;
+    top: -40px;
+}
+.social-widget > div {
+   display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 44px;
+    margin: 0 10px;
+     padding: 4px 9.9px;
+}
+.social-widget .fb {
+       padding: 4px 14.4px;
+}
+.social-widget .g-plus {
+    padding: 4px 5.5px;
+}
+.social-widget .inst {
+    padding: 4px 10.8px;
+}
+.social-widget > div a {
+    color: #fff;
+    font-size: 25px;
+}
+
+
+
+/* Login Page */
+.login-social > div {
+        display: inline-block;
+    margin: 0px 20px 20px;
+    border: 2px solid #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+.login-social > div a {
+    color: #fff;
+	    font-size: 15px;
+}
+.login-social .log-fb{
+	background-color:#3b5998;
+	border-color:#3b5998;
+}
+.login-social .log-gg {
+    background: #ea4335;
+    border-color: #ea4335;
+}
+#msform input {
+    border: none;
+    border-bottom: 2px solid;
+}
+
+
+
+@media screen and (max-width: 768px){
+	.foo_col_outer_wrap.default_width {
+    text-align: center !important;
+}
+ul.gt_team1_contact_info li {
+display: inherit;}
+
+ul.gt_team1_contact_info li i{
+	float:none;
+}
+}
+
+.reg-body{
+	min-height: 800px;
+}
+video.hero-video {
+    background-color: #1f191a;
+    
+}
+.heavy-title {
+    color: #fff;
+    line-height: 1em !important;
+    font-family: Din Next Heavy,Din Next,sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h2.subtitle.serif {
+    font-size: 3em;
+    margin-bottom: 1em;
+    font-family: Qwigley;
+	    font-weight: 400;
+    letter-spacing: 2px;
+}
+.gt_slide_1 a.btn.btn-lg.btn-default {
+    padding: 9px 40px 7px;
+    background: transparent;
+    border: 2px solid #fff !important;
+    border-radius: 30px;
+    color: #fff;
+}
+
+/*Pages*/
+
+.cookies strong{
+	font-weight: bold!important;
+}
+
+.cookies ul{
+	padding: 0 0 0 40px!important;
+}
+
+.cookies li{
+	list-style: disc!important;
+}
+
+.cookies h4 {
+	font-weight: bold!important;
+}
+
+.cookies th{
+	font-weight: bold!important;
+}
+
+.cookies th, .cookies td{
+	text-align: center;
+}
+
+.faqs h4{
+	font-weight: bold;
+}
+
+.faqs-collapsable{
+	margin: 0 0 20px 40px;
+}
+
+.faqs-collapsable p:before {
+	content: '\25ba';
+	padding-right: 0.5em;
+	color: #80cd33;
+}
+
+.who_we_are .card {
+	margin: 0 0 50px 0;
+}
+
+.who_we_are strong{
+	font-weight: bold!important;
+}
+
+.who_we_are img{
+	margin-bottom: 10px!important;
 }

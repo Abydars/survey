@@ -5,7 +5,7 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo">
             <a href="{{ route('dashboard') }}">
-                <img src="{{ asset('images/logo.png') }}" alt="logo" class="logo-default" width="170px" style="filter: brightness(0) invert(1);" /> </a>
+                <img src="{{ public_path() . asset('/images/logo.png') }}" alt="logo" class="logo-default" width="170px" style="filter: brightness(0) invert(1);" /> </a>
             <div class="menu-toggler sidebar-toggler">
                 <span></span>
             </div>

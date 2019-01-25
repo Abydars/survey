@@ -12,7 +12,18 @@
 */
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@getHomePage']);
 Route::get('/about-us', ['as' => 'about_us', 'uses' => 'HomeController@getAboutUs']);
+Route::get('/careers', ['as' => 'careers', 'uses' => 'HomeController@getCareers']);
 Route::get('/contact-us', ['as' => 'contact-us', 'uses' => 'HomeController@getContactUs']);
+Route::get('/blog', ['as' => 'blog', 'uses' => 'HomeController@getBlog']);
+Route::get('/magazine', ['as' => 'magazine', 'uses' => 'HomeController@getMagazine']);
+Route::get('/faqs', ['as' => 'faqs', 'uses' => 'HomeController@getFaqs']);
+Route::get('/privacy-policy', ['as' => 'privacy-policy', 'uses' => 'HomeController@getPrivacyPolicy']);
+Route::get('/cookies', ['as' => 'cookies', 'uses' => 'HomeController@getCookies']);
+Route::get('/terms-conditions', ['as' => 'terms-conditions', 'uses' => 'HomeController@getTermsConditions']);
+Route::get('/who-we-are', ['as' => 'who-we-are', 'uses' => 'HomeController@getWhoWeAre']);
+Route::get('/quantitative-research', ['as' => 'quantitative-research', 'uses' => 'HomeController@getQuantitativeResearch']);
+Route::get('/qualitative-research', ['as' => 'qualitative-research', 'uses' => 'HomeController@getQualitativeResearch']);
+Route::get('/social-environmental-research', ['as' => 'social-environmental-research', 'uses' => 'HomeController@getSocialEnvironmentalResearch']);
 //Authentication Route List
 Route::get('auth', ['as' => 'login', 'uses' => 'AdminAuthController@getLogin']);
 Route::post('auth', ['as' => 'login', 'uses' => 'AdminAuthController@postLogin']);

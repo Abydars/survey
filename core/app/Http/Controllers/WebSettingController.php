@@ -41,12 +41,12 @@ class WebSettingController extends Controller
     {
         $logo = Logo::findOrFail($id);
         $this->validate($request, [
-           'name' => 'required|mimes:png|dimensions:max_width=225,max_height=60'
+           'name' => 'required|mimes:png'
         ]);
         if($request->hasFile('name')){
             $image = $request->file('name');
             $filename = "logo".'.'.$image->getClientOriginalExtension();
-            $location = 'images/' . $filename;
+            $location = public_path() . '/images/' . $filename;
             Image::make($image)->save($location);
             $logo->name = $filename;
             $logo->save();
